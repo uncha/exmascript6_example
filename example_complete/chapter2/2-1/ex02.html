@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>let과 const</title>
+	<script type="text/javascript">
+		(function(){
+		    var a = 100;
+		    switch(a){
+		        case 100:
+		            var a = 200;
+		            break;
+		    }
+		    console.log(a);
+		})();
+
+		(function(){
+		    let a = 100;
+		    switch(a){
+		        case 100:
+		            let a = 200;
+		            break;
+		    }
+		    console.log(a);
+		})();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

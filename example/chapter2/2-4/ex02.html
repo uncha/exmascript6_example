@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>템플릿 리터럴(Template literals)</title>
+	<script type="text/javascript">
+		var a = 2;
+		var b = 8;
+
+		function sum(a, b){
+			var value = b % a;
+			var result;
+			(value == 0) ? result = 'a는 b의 약수입니다.' : result = 'a는 b의 약수가아닙니다.';
+
+			return result;
+		}
+
+		var value = 'a의값은 ' + a + '이고, b의값은 ' + b + '입니다.\n' + sum(a, b);
+		console.log(value);
+	</script>
+</head>
+<body>
+</body>
+</html>
