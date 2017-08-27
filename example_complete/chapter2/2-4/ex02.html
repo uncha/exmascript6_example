@@ -6,15 +6,13 @@
 		var a = 2;
 		var b = 8;
 
-		function sum(a, b){
-			var value = b % a;
-			var result;
-			(value == 0) ? result = 'a는 b의 약수입니다.' : result = 'a는 b의 약수가아닙니다.';
-
+		function sum(str, a, b){
+			var result = `${str[0]}${a}${str[1]}${b}${str[2]}
+			${(b%a==0)? 'a는 b의 약수입니다.':'a는 b의 약수가아닙니다.'}`;
 			return result;
 		}
 
-		var value = 'a의값은 ' + a + '이고, b의값은 ' + b + '입니다.\n' + sum(a, b);
+		var value = sum`a의값은 ${a}이고, b의값은 ${b}입니다.`;
 		console.log(value);
 	</script>
 </head>

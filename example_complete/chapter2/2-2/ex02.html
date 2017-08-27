@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>이터러블 규약과 이터레이터 규약</title>
+	<script type="text/javascript">
+		let iterator = {
+		    i:1,
+		    [Symbol.iterator]:function(){
+		        return this;
+		    },
+		    next:function(){
+		        return (this.i < 4) ? {value:this.i++, done:false} : {value:undefined, done:true};
+		    }
+		}
+		 
+		console.log(iterator.next());
+		console.log(iterator.next());
+		console.log(iterator[Symbol.iterator]().next());
+		console.log(iterator[Symbol.iterator]().next());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

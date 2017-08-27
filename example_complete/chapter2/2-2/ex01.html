@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>이터러블 규약과 이터레이터 규약</title>
+	<script type="text/javascript">
+		let str = "iterator";
+		let iterator = str[Symbol.iterator]();
+		let result;
+		do{
+		    result= iterator.next();    
+		    console.log(result.value, result.done);
+		}
+		while(result.value); 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

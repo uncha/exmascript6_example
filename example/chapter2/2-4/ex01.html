@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>템플릿 리터럴(Template literals)</title>
+    <style type="text/css">
+        #user table{width:100%;}
+    </style>
+    <script type="text/javascript">
+        var user = {
+            name: '홍길동',
+            age: 30,
+            job: 'programmer'
+        };
+        
+        window.onload = function(){
+            var html =  '<table border="1">';
+                html += '<thead>';
+                html += '<tr>';
+                html += '<th>이름</th>';
+                html += '<th>나이</th>';
+                html += '<th>직업</th>';
+                html += '</tr>';
+                html += '</thead>';
+                html += '<tbody>';
+                html += '<tr>';
+                html += '<td>' + user.name + '</td>';
+                html += '<td>' + user.age + '</td>';
+                html += '<td>' + user.job + '</td>';
+                html += '</tr>';
+                html += '</tbody>';
+                html += '</table>';
+ 
+            document.getElementById('user').innerHTML = html;
+        }
+    </script>
+</head>
+<body>
+    <div id="user"></div>
+</body>
+</html>
