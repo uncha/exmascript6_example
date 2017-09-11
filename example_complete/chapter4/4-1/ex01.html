@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spread Operator</title>
+	<script type="text/javascript">
+		let arr = [2,3,4];
+ 
+		function myFunction(){
+		    let arr = [0, 1, ...arguments, 5,6];
+		    console.log(arr);
+		}
+		
+		myFunction(...arr);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
