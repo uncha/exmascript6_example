@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>클래스(Class)</title>
+	<script type="text/javascript">
+		var Animal = function(){};
+		Animal.prototype.eat = function(){
+			console.log('먹기');
+		}
+		Animal.prototype.sound = function(){
+			console.log('소리내기');
+		}
+		
+		var Dog = function(){};
+		Dog.prototype = new Animal();
+		Dog.prototype.sound = function(){
+			console.log('멍멍');
+		}
+		Dog.prototype.eat = function(){
+			console.log('사료');
+		}
+		Dog.prototype.guard = function(){
+			console.log('집지키기');
+		}
+		
+		var Tiger = function(){};
+		Tiger.prototype = new Animal();
+		Tiger.prototype.sound = function(){
+			console.log('어흥');
+		}
+		Tiger.prototype.eat = function(){
+			console.log('닭고기');
+		}
+		Tiger.prototype.attack = function(){
+			console.log('공격');
+		}
+		
+		var dog = new Dog();
+		dog.sound();
+
+		var tiger = new Tiger();
+		tiger.sound();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

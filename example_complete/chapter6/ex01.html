@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>클래스(Class)</title>
+	<script type="text/javascript">
+		class Animal{
+			constructor(){
+				
+			}
+			eat(){
+				console.log('먹기');
+			}
+			sound(){
+				console.log('소리');
+			}
+		}
+		
+		class Dog extends Animal{
+			constructor(){
+				super();
+			}
+			sound(){
+				console.log('멍멍');
+			}
+			eat(){
+				console.log('사료');
+			}
+			guard(){
+				console.log('집지키기');
+			}
+		}
+		
+		class Tiger extends Animal{
+			constructor(){
+				super();
+			}
+			sound(){
+				console.log('어흥');
+			}
+			eat(){
+				console.log('닭고기');
+			}
+			attack(){
+				console.log('사냥');
+			}
+		}
+		
+		var dog = new Dog();
+		dog.sound();
+
+		var tiger = new Tiger();
+		tiger.sound();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
