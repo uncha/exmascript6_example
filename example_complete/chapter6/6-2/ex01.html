@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>모듈(Module)</title>
+	<script type="module">
+		import Loader from './js/loader.js';
+
+		const loader = new Loader();
+		loader.load({
+			url:'./data/data.json',
+			callback:function(data){
+				document.body.innerHTML = JSON.parse(data).success;
+			}
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
