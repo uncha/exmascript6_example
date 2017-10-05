@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>프록시(Proxy)</title>
+	<script type="text/javascript">
+		const target = {
+			author:'kim',
+			version:'1.0',
+			text:'read only property'
+		};
+
+		const proxy = new Proxy(target, {
+			set:function(){
+				throw new Error('This is a read-only property.');
+			}
+		});
+
+		console.log(proxy.text);
+		proxy.text = 'new text';
+	</script>
+</head>
+<body>
+
+</body>
+</html>
