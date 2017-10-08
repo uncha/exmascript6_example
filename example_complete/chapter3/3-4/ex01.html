@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise</title>
+    <style>
+        body h1{font-size: 24px; color:red;}
+    </style>
+    <script type="text/javascript">
+        let promise = new Promise(function(resolve, reject){
+        let req = new XMLHttpRequest();
+            req.open('GET', 'data.html');
+            req.send();
+            req.onreadystatechange = function(){
+                if(req.readyState == req.DONE){
+                    if(req.status == 200){
+                        resolve(req.response);
+                    } else {
+                        reject(req.statusText);
+                    }
+                }
+            }
+        });
+        
+        promise.then(function(value){
+            document.body.innerHTML = value;
+        }, function(reason){
+            console.log(reason);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

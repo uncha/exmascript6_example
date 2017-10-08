@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise</title>
+    <style>
+        body h1{font-size: 24px; color:red;}
+    </style>
+    <script type="text/javascript">
+        let req = new XMLHttpRequest();
+        req.open('GET', 'data.html');
+        req.send();
+        req.onreadystatechange = function(){
+            if(req.readyState == req.DONE){
+                if(req.status == 200){
+                    document.body.innerHTML =  req.response;
+                } else {
+                    console.log(req.statusText);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

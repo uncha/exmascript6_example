@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>새로 추가된 컬렉션(collections)</title>
+    <script type="text/javascript">
+        let str = '공부합시다 ES6 ES6';
+        
+        // Array
+        let arr = [];
+        
+        const unique = function(text){
+            let isUnique = true;
+            for(let value of arr){
+                if(value == text) isUnique = false;
+            }
+            return isUnique;
+        }
+         
+        for(let text of str){
+            let isUnique = unique(text);
+            if(isUnique) arr.push(text);
+        }
+        
+        for(let value of arr){
+            console.log(value);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

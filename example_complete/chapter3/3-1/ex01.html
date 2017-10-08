@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>for...of문</title>
+    <script type="text/javascript">
+        let iterator = {
+            fruits:['사과', '바나나', '포도', '딸기'],
+            [Symbol.iterator]:function(){
+                return this;
+            },
+            next:function(){
+                let value = this.fruits.shift();
+                let done = (value) ? false : true;
+                return {value:value, done:done};
+            }
+        }
+        
+        for(let value of iterator){
+            console.log(value);
+        }
+        
+        function* gen(){
+            yield '사과';
+            yield '바나나';
+            yield '포도';
+            yield '딸기';
+        }
+
+        for(let value of gen()){
+            console.log(value);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
