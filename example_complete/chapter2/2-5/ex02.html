@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>타입배열(Typed Array)</title>
+	<script type="text/javascript">
+		var buffer = new ArrayBuffer(16);
+		var view = new Int16Array(buffer);
+		var blob = new Blob([view], {type: 'application/octet-binary'});
+		var url = URL.createObjectURL(blob);
+		console.log(url);
+	</script>
+</head>
+<body>
+</body>
+</html>
