@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO LIST</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./app.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./app.js"></script>
+</head>
+<body>
+	<div class="contents">
+		<h1>TODO LIST</h1>
+		<div class="insert-form row">
+			<div class="col-lg-12">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="할일을 입력해 주세요.">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button">SAVE</button>
+					</span>
+				</div><!-- /input-group -->
+			</div><!-- /.col-lg-12 -->
+		</div><!-- /.row -->
+		<table class="table table-striped">
+			<colgroup>
+			    <col>
+			    <col style="width:150px">
+			    <col style="width:130px">
+			</colgroup>
+			<thead>
+				<th>내용</th>
+				<th>시간</th>
+				<th>설정</th>
+			</thead>
+			<tbody id="list">
+				<!-- insert todo list -->
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+		const data = [
+			{
+				content:'1',
+				date:'2017-12-05'
+			},{
+				content:'2',
+				date:'2017-12-06'
+			},{
+				content:'3',
+				date:'2017-12-07'
+			},{
+				content:'4',
+				date:'2017-12-08'
+			},{
+				content:'5',
+				date:'2017-12-09'
+			},{
+				content:'6',
+				date:'2017-12-10'
+			}
+		]
+
+		const render = ()=>{
+			let template = `<tr>
+								<td><a href="#">내용입니다.</a></td>
+								<td class="text-center"><span>2017-12-05</span></td>
+								<td class="text-right">
+									<input class="btn btn-default btn-modify" type="button" value="수정" />
+									<input class="btn btn-default btn-delete" type="button" value="삭제" />
+								</td>
+							</tr>`;
+			
+			let $template = $(template);
+
+			$('#list').append($template);
+
+			$template.find('.btn-modify').bind('click', ()=>{
+				alert('ccc');
+			});
+		}
+		render();
+	</script>
+</body>
+</html>
