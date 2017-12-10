@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>타입배열(Typed Array)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const buffer = new ArrayBuffer(3);
+		const rgb = new Uint8ClampedArray(buffer);
+		
+		rgb[0] = parseInt(Math.random(255) * 100);
+		rgb[1] = parseInt(Math.random(255) * 100);
+		rgb[2] = parseInt(Math.random(255) * 100);
+		
+		document.body.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+	</script>
+</body>
+</html>
