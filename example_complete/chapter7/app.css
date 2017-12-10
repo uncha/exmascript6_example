@@ -1,0 +1,5 @@
+.contents{max-width: 1000px; margin:0 auto; width:100%; padding:5px; box-sizing: border-box;}
+.table{margin-top:50px; box-sizing: border-box;}
+.table th{text-align: center;}
+.table td span{line-height: 34px;}
+.table td.no-list{text-align: center;}
